@@ -81,7 +81,7 @@ To set up this project, follow these steps:
 1. Clone this repository to your local environment:
 
     ```shell
-    git clone https://github.com/victor90braz/eloquent-relationship.git
+    git clone https://github.com/victor90braz/eloquent-relationship-braz.git
     ```
 
 2. Navigate to the project directory:
