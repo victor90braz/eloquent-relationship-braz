@@ -4,7 +4,9 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "start": "php artisan serve"
+        "start": "php artisan serve",
+        "tinker": "php artisan tinker",
+        "migrate": "php artisan migrate"
     },
     "devDependencies": {
         "axios": "^1.1.2",
