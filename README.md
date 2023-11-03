@@ -239,3 +239,9 @@ $tag->posts()->attach(2)
 
     $tag = App\Models\Tag::first()
     $tag->posts()->attach(2)
+
+# debugar
+
+@php artisan vendor:publish --tag=laravel-assets --ansi --force
+
+composer require barryvdh/laravel-debugbar --dev
