@@ -245,3 +245,23 @@ $tag->posts()->attach(2)
 @php artisan vendor:publish --tag=laravel-assets --ansi --force
 
 composer require barryvdh/laravel-debugbar --dev
+
+# important!! add
+
+protected $guarded = [];
+
+# example create a post
+
+Route::get('/', function () {
+$user = App\Models\User::first();
+
+    $post = $user->posts()->create([
+        'title' => 'foobar',
+        'body' => 'loren ipsum'
+    ]);
+
+    $post->tags()->attach(1);
+
+    return view('welcome');
+
+});
