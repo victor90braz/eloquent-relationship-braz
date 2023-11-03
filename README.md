@@ -171,8 +171,44 @@ DB::getQueryLog();
 
 This will display an array of logged queries with query text, bindings, and execution times, providing an alternative approach for debugging purposes.
 
-# examples
+# Create a new Post instance.
 
 $post = new App\Models\Post()
+
+# Find a Post with ID 1.
+
 $post->find(1)
+
+# Get tags related to Post with ID 1.
+
 $post->find(1)->tags
+
+# Retrieve tag names associated with Post ID 1.
+
+$post->find(1)->tags->pluck('name')
+
+# Create a new Tag instance.
+
+$tag = new App\Models\Tag()
+
+# Retrieve the first Tag from the database.
+
+$tag->first()
+
+# Get all the posts related to the first Tag.
+
+$tag->first()->posts
+
+# Find a Post with ID 1.
+
+$post = new App\Models\Post()
+
+# Find a Post with ID 1 and attach Tag ID 2 to it.
+
+$post->find(1)->tags()->attach(2)
+
+# more examples
+
+$tag = new App\Models\Tag()
+$tag->find(1)
+$tag->find(1)->posts()->attach(2)
