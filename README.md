@@ -283,3 +283,9 @@ $learning->posts;
 $post = new Post()
 $post->factory(4)->create(['user_id' => 7]);
 App\Models\Affiliation::whereName('vel')->first()
+
+# mophs
+
+$collection = App\Models\Collection::first()
+$collection->find(1)
+$collection->videos
