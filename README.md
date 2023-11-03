@@ -170,3 +170,9 @@ DB::getQueryLog();
 ```
 
 This will display an array of logged queries with query text, bindings, and execution times, providing an alternative approach for debugging purposes.
+
+# examples
+
+$post = new App\Models\Post()
+$post->find(1)
+$post->find(1)->tags
