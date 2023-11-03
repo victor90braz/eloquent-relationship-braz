@@ -59,6 +59,7 @@ These relationships simplify database querying and make it easier to work with r
 # Database -> Tinker
 
 \App\Models\User::factory(5)->create();
+\App\Models\Post::factory(5)->create();
 $user = new User();
 $user->find(8) // user_id
 $user->find(8)->posts
@@ -221,3 +222,20 @@ $post->find(1)->tags()->detach(2)
 
 $tag = App\Models\Tag::first()
 $tag->posts()->attach(2)
+
+# factory example
+
+\App\Models\User::factory(5)->create();
+\App\Models\Post::factory(5)->create();
+
+-   once the tables are created with user and posts then create the references
+
+    # case post
+
+    $post = new App\Models\Post()
+    $post->find(1)->tags()->attach(2)
+
+    # case tag
+
+    $tag = App\Models\Tag::first()
+    $tag->posts()->attach(2)
