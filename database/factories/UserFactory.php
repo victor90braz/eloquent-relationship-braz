@@ -5,6 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use App\Models\Affiliation;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
@@ -27,10 +28,12 @@ class UserFactory extends Factory
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
             'experience_points' => 0,
-            'username' => $this->faker->unique()->userName(), // Generate unique usernames
+            'username' => $this->faker->unique()->userName(),
+            'affiliation_id' => function () {
+                return Affiliation::factory()->create()->id;
+            }
         ];
     }
-
 
     /**
      * Indicate that the model's email address should be unverified.
