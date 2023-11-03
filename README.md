@@ -265,3 +265,8 @@ $user = App\Models\User::first();
     return view('welcome');
 
 });
+
+# new topic -> hasManyThrough
+
+$affiliation = new App\Models\Affiliation
+$affiliation = $affiliation->where('name', 'conservative')->first()
