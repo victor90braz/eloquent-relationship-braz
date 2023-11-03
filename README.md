@@ -212,3 +212,7 @@ $post->find(1)->tags()->attach(2)
 $tag = new App\Models\Tag()
 $tag->find(1)
 $tag->find(1)->posts()->attach(2)
+
+# delete association from post_id 1 and tag_id 2
+
+$post->find(1)->tags()->detach(2)
