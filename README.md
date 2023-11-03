@@ -270,3 +270,16 @@ $user = App\Models\User::first();
 
 $affiliation = new App\Models\Affiliation
 $affiliation = $affiliation->where('name', 'conservative')->first()
+
+or
+
+App\Models\Affiliation::whereName('liberal')->first()
+
+$learning = App\Models\Affiliation::whereName('liberal')->first()
+$learning->posts;
+
+# example
+
+$post = new Post()
+$post->factory(4)->create(['user_id' => 7]);
+App\Models\Affiliation::whereName('vel')->first()
