@@ -19,3 +19,7 @@ class Post extends Model
         return $this->belongsToMany(Tag::class);
     }
 }
+
+// posts
+// tags ['family', 'personal', 'work', 'vacation']
+// post_tag
