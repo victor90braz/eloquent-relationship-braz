@@ -9,8 +9,8 @@ class Video extends Model
 {
     use HasFactory;
 
-    public function series()
+    public function watchable()
     {
-        return $this->belongsTo(Series::class);
+        return $this->morphTo();
     }
 }
