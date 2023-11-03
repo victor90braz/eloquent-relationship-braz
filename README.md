@@ -216,3 +216,8 @@ $tag->find(1)->posts()->attach(2)
 # delete association from post_id 1 and tag_id 2
 
 $post->find(1)->tags()->detach(2)
+
+# examples
+
+$tag = App\Models\Tag::first()
+$tag->posts()->attach(2)
