@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Note extends Model
 {
     use HasFactory;
+
+    public function like() {
+
+    }
+
+    public function likes()
+    {
+
+    }
 }
