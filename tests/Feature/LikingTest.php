@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Opnion;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -27,7 +28,7 @@ class LikingTest extends TestCase
     {
         $this->actingAs(\App\Models\User::factory()->create());
 
-        $option = \App\Models\Opnion::factory()->create();
+        $option = Opnion::factory()->create();
 
         $this->assertCount(1, $option->likes());
     }

@@ -11,8 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('opnions', function (Blueprint $table) {
-            $table->id();
+        Schema::create('likables', function (Blueprint $table) {
+
+            $table->primary(['user_id', 'likable_id', 'likable_type']);
+
+            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('likable_id');
+            $table->string('likable_type');
+
             $table->timestamps();
         });
     }
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('opnions');
+        Schema::dropIfExists('likables');
     }
 };
