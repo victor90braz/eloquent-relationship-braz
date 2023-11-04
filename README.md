@@ -298,7 +298,7 @@ npm run test LikeNotesTest
 
 # create logic convence -> steps -> follow the alfabethic order
 
-        - posts
+        - notes
             - id
             - title
             - body
@@ -306,6 +306,6 @@ npm run test LikeNotesTest
         - users
             - id
 
-        - post_user
+        - note_user
             - user_id
-            - post_id
+            - note_id
