@@ -16,5 +16,6 @@ class LikeNotesTest extends TestCase
         $note->like();
 
         $this->assertCount(1, $note->likes);
+        $this->assertTrue($note->likes->contains('id', auth()->id()));
     }
 }
