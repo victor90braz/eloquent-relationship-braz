@@ -289,3 +289,23 @@ App\Models\Affiliation::whereName('vel')->first()
 $collection = App\Models\Collection::first()
 $collection->find(1)
 $collection->videos
+
+# test
+
+"test": "php artisan test --filter="
+
+npm run test LikeNotesTest
+
+# create logic convence -> steps -> follow the alfabethic order
+
+        - posts
+            - id
+            - title
+            - body
+
+        - users
+            - id
+
+        - post_user
+            - user_id
+            - post_id
