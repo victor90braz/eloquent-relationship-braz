@@ -30,6 +30,12 @@ class LikingTest extends TestCase
 
         $option = Opnion::factory()->create();
 
-        $this->assertCount(1, $option->likes());
+        // Like the option
+        $option->like();
+
+        // Retrieve the likes and count them
+        $likeCount = $option->likes->count();
+
+        $this->assertEquals(1, $likeCount);
     }
 }
