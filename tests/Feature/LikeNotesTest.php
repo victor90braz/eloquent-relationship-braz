@@ -9,6 +9,8 @@ class LikeNotesTest extends TestCase
     /** @test */
     public function a_note_can_be_liked()
     {
+        $this->actingAs(\App\Models\User::factory()->create());
+
         $note = \App\Models\Note::factory()->create();
 
         $note->like();
