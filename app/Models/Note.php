@@ -10,11 +10,11 @@ class Note extends Model
     use HasFactory;
 
     public function like() {
-
+       // return $this->hasOne(Note::class);
     }
 
     public function likes()
     {
-
+        return $this->belongsToMany(User::class);
     }
 }
