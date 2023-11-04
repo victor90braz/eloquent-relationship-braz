@@ -15,6 +15,8 @@ return new class extends Migration
             $table->primary(['note_id', 'user_id']);
             $table->unsignedInteger('note_id');
             $table->unsignedInteger('user_id');
+
+            $table->timestamps();
         });
     }
 
